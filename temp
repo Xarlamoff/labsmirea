@@ -1,0 +1,99 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main( int argc ,char* argv[] )
+{
+    float count;
+    count = atof (argv[1]);
+
+    if (argc == 2 )
+    {
+        if (count > -273.15) {
+        printf("%.2f C:\n", count );
+           }
+         else printf("C:null \n");
+
+         if (count *1.8 + 32 > -459.67) {
+         printf("%.2f F: \n", count *1.8 + 32 );
+          }
+         else printf("F:null\n");
+
+        if (count +273.15 > 0) {
+        printf("%.2f K:\n\n",  count +273.15 );
+           }
+         else printf("K:null\n\n");
+
+
+        if (count > 0) {
+         printf("%.2f K:\n", count );
+           }
+         else printf("K:null\n");
+
+        if (count -273.15 > -273.15) {
+        printf("%.2f C:\n", count );
+           }
+         else printf("C:null \n");
+
+        if (count * 9 / 5 - 459.67 > -459.67) {
+         printf("%.2f F: \n\n", count * 9 / 5 - 459.67);
+          }
+         else printf("F:null\n\n");
+
+
+        if (count > -459.67) {
+         printf("%.2f F: \n", count );
+          }
+         else printf("F:null\n");
+
+        if ((count -32) / 1.8 > -273.15) {
+         printf("%.2f C:\n", (count -32) / 1.8 );
+           }
+         else printf("C:null \n");
+
+        if ((count +459.67) * 5 / 9 > 0) {
+        printf("%.2f K:\n", (count +459.67) * 5 / 9 );
+          }
+         else printf("K:null\n");
+    }
+
+    else if (argc == 3)
+    {
+
+ if (strcmp(argv[2],"C") == 0 || strcmp(argv[2], "c") == 0)
+{
+     if (count > -273.15 ) {
+        printf("%.2f C:\n", count );
+        printf("%.2f F\n", count *1.8 + 32 );
+        printf("%.2f K\n\n", count +273.15 );
+     }
+     else printf("null");
+}
+
+   else if(strcmp(argv[2], "F")== 0 || strcmp(argv[2], "f") == 0)
+
+     {
+         if (count > -459.67) {
+      printf("%.2f F: \n", count );
+        printf("%.2f C\n", (count -32) / 1.8 );
+        printf("%.2f K", (count +459.67) * 5 / 9 );
+         }
+    else printf("null");
+ }
+
+   else if (strcmp(argv[2], "K") == 0 || strcmp(argv[2], "k") == 0)
+
+    {
+       if (count > 0) {
+
+        printf("%.2f K:\n", count );
+        printf("%.2f C\n", count -273.15 );
+        printf("%.2f F\n\n", count * 9 / 5 - 459.67);
+       }
+     else printf ("null");
+ }
+
+     }
+
+    return 0;
+}
